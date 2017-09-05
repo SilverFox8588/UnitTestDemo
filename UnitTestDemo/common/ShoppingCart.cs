@@ -8,8 +8,8 @@ namespace UnitTestDemo.common
 {
     public class ShoppingCart
     {
-        private Dictionary<Item, int> items = new Dictionary<Item, int>();
-        private Hashtable hashtable = new Hashtable();
+        private Dictionary<Item, int> _items = new Dictionary<Item, int>();
+        private Hashtable _hashtable = new Hashtable();
 
         /// <summary>
         /// Adds the items.
@@ -18,7 +18,7 @@ namespace UnitTestDemo.common
         /// <param name="quantity">The quantity.</param>
         public void AddItems(Item item, int quantity)
         {
-            items.Add(item, quantity);
+            _items.Add(item, quantity);
 
             //if (quantity > 0)
             //{
@@ -40,7 +40,23 @@ namespace UnitTestDemo.common
 
         public void DeleteItems(Item item, int quantity)
         {
-            items[item] = items[item] - quantity;
+            _items[item] = _items[item] - quantity;
+
+            //if (items.ContainsKey(item))
+            //{
+            //    if (items[item] > quantity)
+            //    {
+            //        items[item] = items[item] - quantity;
+            //    }
+            //    else if (items[item] == quantity)
+            //    {
+            //        items.Remove(item);
+            //    }
+            //    else
+            //    {
+            //        throw new ArgumentException("The quantity is larger than that in shopping cart.");
+            //    }
+            //}
             //hashtable[item] = items[item] = quantity;
         }
 
@@ -50,12 +66,11 @@ namespace UnitTestDemo.common
         /// <value>
         /// The item count.
         /// </value>
-        public int ItemCount
+        public int TotalItemsCount
         {
             get
             {
-                return items.Count;
-                //return items.Sum(x => x.Value);
+                return _items.Sum(x => x.Value);
             }
         }
     }

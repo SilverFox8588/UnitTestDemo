@@ -2,9 +2,9 @@
 {
     public enum ItemType : byte
     {
-        HomeAppliances = 1,
-        OfficeSupplies = 2,
-        Car = 3,
-        Computer = 4
+        HomeAppliances = 0,
+        OfficeSupplies = 1,
+        Car = 2,
+        Computer = 3
     }
 }
