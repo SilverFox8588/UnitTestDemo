@@ -87,6 +87,7 @@
     <Compile Include="common\ShoppingCartTest.cs" />
     <Compile Include="common\PerformanceTest.cs" />
     <Compile Include="common\CmpTest.cs" />
+    <Compile Include="Extends\ShoppingCartTesting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>

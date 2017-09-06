@@ -8,8 +8,8 @@ namespace UnitTestDemo.common
 {
     public class ShoppingCart
     {
-        private Dictionary<Item, int> _items = new Dictionary<Item, int>();
-        private Hashtable _hashtable = new Hashtable();
+        protected Dictionary<Item, int> _items = new Dictionary<Item, int>();
+        protected Hashtable _hashtable = new Hashtable();
 
         /// <summary>
         /// Adds the items.
@@ -70,6 +70,7 @@ namespace UnitTestDemo.common
         {
             get
             {
+                //return _items.Count;
                 return _items.Sum(x => x.Value);
             }
         }
